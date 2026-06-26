@@ -115,7 +115,7 @@ export function PageHero({ eyebrow, title, sub, img }: { eyebrow: string; title:
           <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.02] md:text-7xl">{title}</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">{sub}</p>
           <div className="mt-10 flex items-center justify-center gap-3 text-[10px] font-semibold uppercase tracking-[0.4em] text-white/40">
-            <span className="h-px w-12 bg-white/20" /> Westminster, MD <span className="h-px w-12 bg-white/20" />
+            <span className="h-px w-12 bg-white/20" /> Hanover, PA <span className="h-px w-12 bg-white/20" />
           </div>
         </Reveal>
       </div>

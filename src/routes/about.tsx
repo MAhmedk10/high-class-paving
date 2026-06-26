@@ -21,7 +21,7 @@ function About() {
   return (
     <Layout>
       <PageHero
-        eyebrow="About Us"
+        eyebrow="Hanover, PA"
         title={<>Building better driveways across <span className="text-gradient-orange">Maryland.</span></>}
         sub="Local, family-minded and craftsmanship-obsessed. Here's what drives us."
         img={site.images.driveEntry}
