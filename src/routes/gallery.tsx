@@ -22,6 +22,9 @@ const items = [
   { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F95b245be7ce84ee3a4e35ab267505288?format=webp&width=800&height=1200", title: "Professional Crack Repair" },
   { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fc1b5335691814c40b3773b8cce662005?format=webp&width=800&height=1200", title: "Crack Sealing Application" },
   { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fdf173dcf8c594665ae5c1bf27f99a945?format=webp&width=800&height=1200", title: "Quality Crack Repair Work" },
+  { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F2879411f8ef241e6861b485f775d3984?format=webp&width=800&height=1200", title: "New Asphalt Driveway Install" },
+  { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fdca6a4a975e84d91a298dea285346153?format=webp&width=800&height=1200", title: "Fresh Asphalt Installation" },
+  { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F848ca3262db64f3bbaa4b9f1bfe927b9?format=webp&width=800&height=1200", title: "Professional Asphalt Paving" },
 ];
 
 function Gallery() {
