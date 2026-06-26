@@ -6,18 +6,33 @@ import { FinalCTA } from "./index";
 import { site } from "@/lib/site";
 import { usePageMeta } from "@/lib/usePageMeta";
 
-const cats = ["All", "Sealcoating", "Resurfacing", "Installation", "Repair"] as const;
+const cats = ["All", "Sealcoating", "Resurfacing", "Installation", "Repair", "Tar & Chip"] as const;
 type Cat = typeof cats[number];
 
 const items = [
-  { cat: "Installation" as Cat, img: site.images.driveHill, title: "Hillside Driveway Install", span: "md:col-span-2 md:row-span-2" },
-  { cat: "Sealcoating" as Cat, img: site.images.sealTree, title: "Wraparound Sealcoating", span: "md:row-span-2" },
-  { cat: "Resurfacing" as Cat, img: site.images.driveEntry, title: "Estate Entrance Resurface", span: "md:col-span-2" },
-  { cat: "Repair" as Cat, img: site.images.crackRepair, title: "Crack Repair & Sealing", span: "md:col-span-1" },
+  { cat: "Installation" as Cat, img: site.images.driveHill, title: "Hillside Driveway Install" },
+  { cat: "Sealcoating" as Cat, img: site.images.sealTree, title: "Wraparound Sealcoating" },
+  { cat: "Resurfacing" as Cat, img: site.images.driveEntry, title: "Estate Entrance Resurface" },
+  { cat: "Repair" as Cat, img: site.images.crackRepair, title: "Crack Repair & Sealing" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F62bd63cfbd0a4c858933943f39c2fef0?format=webp&width=800&height=1200", title: "Fresh Seal Coat Application" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fb79fe0d255c842fa936fc5f53b890dce?format=webp&width=800&height=1200", title: "Professional Sealcoating" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F852ddd53c0f640e5bb57d94b85e47dd0?format=webp&width=800&height=1200", title: "Full Driveway Sealcoat" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F84777fff90f2465ebd5f3676f118a305?format=webp&width=800&height=1200", title: "Quality Sealcoating Finish" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fe74dbd733bc94a6aabbd7849cbc7c477?format=webp&width=800&height=1200", title: "Crack Filling Process" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F95b245be7ce84ee3a4e35ab267505288?format=webp&width=800&height=1200", title: "Professional Crack Repair" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fc1b5335691814c40b3773b8cce662005?format=webp&width=800&height=1200", title: "Crack Sealing Application" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fdf173dcf8c594665ae5c1bf27f99a945?format=webp&width=800&height=1200", title: "Quality Crack Repair Work" },
+  { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F2879411f8ef241e6861b485f775d3984?format=webp&width=800&height=1200", title: "New Asphalt Driveway Install" },
+  { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fdca6a4a975e84d91a298dea285346153?format=webp&width=800&height=1200", title: "Fresh Asphalt Installation" },
+  { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F848ca3262db64f3bbaa4b9f1bfe927b9?format=webp&width=800&height=1200", title: "Professional Asphalt Paving" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fe368d9d8e3984693bbc7efb4eb954c24?format=webp&width=800&height=1200", title: "Elegant Tar & Chip Driveway" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F66648e2fbd6d4ae383dfe2987325b936?format=webp&width=800&height=1200", title: "Rustic Tar & Chip Surface" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F62fbc1ab54fa488c941dca1dd97852c8?format=webp&width=800&height=1200", title: "Before & After Tar & Chip" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F19de1a3c7fd5488497c52007bc5c37bc?format=webp&width=800&height=1200", title: "Premium Tar & Chip Installation" },
 ];
 
 function Gallery() {
-  usePageMeta("Gallery — Paving & Sealcoating Projects | High-Class Paving", "Real before & after photos of sealcoating, resurfacing and asphalt installation projects in Westminster, MD.");
+  usePageMeta("Gallery — Paving & Sealcoating Projects | High-Class Paving", "Real before & after photos of sealcoating, resurfacing and asphalt installation projects in Hanover, PA and surrounding areas.");
   const [active, setActive] = useState<Cat>("All");
   const filtered = active === "All" ? items : items.filter((i) => i.cat === active);
 
@@ -26,7 +41,7 @@ function Gallery() {
       <PageHero
         eyebrow="Portfolio"
         title={<>Real work, <span className="text-gradient-orange">real results.</span></>}
-        sub="A look at recent residential paving and sealcoating projects across Westminster and Carroll County."
+        sub="A look at recent residential paving and sealcoating projects across Hanover, PA and surrounding Pennsylvania and Maryland communities."
         img={site.images.sealTree}
       />
 
@@ -50,9 +65,9 @@ function Gallery() {
             </div>
           </Reveal>
 
-          <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-3 md:grid-flow-dense">
+          <div className="grid auto-rows-[280px] grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {filtered.map((it, i) => (
-              <Reveal key={i} delay={i * 0.05} className={it.span ?? ""}>
+              <Reveal key={i} delay={i * 0.05}>
                 <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10">
                   <img src={it.img} alt={it.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/40 to-transparent" />

@@ -16,7 +16,7 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-            Premium paving, resurfacing, sealcoating and tar &amp; chip throughout Westminster, Maryland and surrounding communities. Backed by a 1-year workmanship warranty.
+            Premium paving, resurfacing, sealcoating and tar &amp; chip throughout Hanover, PA and the surrounding Pennsylvania and Maryland areas. Backed by a 1-year workmanship warranty.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm">
             <a href={site.phoneHref} className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 hover:border-primary/50">

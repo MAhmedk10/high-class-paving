@@ -20,7 +20,7 @@ const trustBadges = [
 
 const marquee = [
   "1-Year Warranty", "Premium Materials", "Reliable Scheduling",
-  "Professional Service", "Westminster Local Business", "Free Estimates",
+  "Professional Service", "Premium Local Business", "Free Estimates",
 ];
 
 const whyUs = [
@@ -51,7 +51,7 @@ const steps = [
 ];
 
 function Home() {
-  usePageMeta("High-Class Paving & Sealcoating LLC | Westminster, MD", "Premium asphalt paving, resurfacing, sealcoating and tar & chip in Westminster, MD. 1-year warranty. Call 443-617-4992 for a free estimate.");
+  usePageMeta("High-Class Paving & Sealcoating LLC | Hanover, PA", "Premium asphalt paving, resurfacing, sealcoating and tar & chip in Hanover, PA and surrounding areas. 1-year warranty. Call 443-617-4992 for a free estimate.");
   return (
     <Layout>
       {/* HERO */}
@@ -68,7 +68,7 @@ function Home() {
           <div className="max-w-3xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-              <Star className="h-3.5 w-3.5 fill-primary text-primary" /> Westminster, Maryland
+              <Star className="h-3.5 w-3.5 fill-primary text-primary" /> Hanover, Pennsylvania
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 0.8 }}
@@ -79,7 +79,7 @@ function Home() {
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}
               className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Protect, restore and enhance your property with professional paving, resurfacing, sealcoating and tar &amp; chip services throughout Westminster, Maryland and surrounding communities.
+              Protect, restore and enhance your property with professional paving, resurfacing, sealcoating and tar &amp; chip services throughout Hanover, PA and the surrounding Pennsylvania and Maryland areas.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
               className="mt-9 flex flex-wrap items-center gap-4">
@@ -269,7 +269,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <SectionHeading
             eyebrow="Customer Reviews"
-            title={<>Trusted by homeowners <span className="text-gradient-blue">across Maryland.</span></>}
+            title={<>Trusted by homeowners <span className="text-gradient-blue">across PA & Maryland.</span></>}
           />
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {reviews.map((r, i) => (
@@ -283,7 +283,7 @@ function Home() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary font-display font-bold text-primary-foreground">★</div>
                     <div>
                       <p className="text-sm font-semibold">{r.name}</p>
-                      <p className="text-xs text-muted-foreground">Westminster, MD</p>
+                      <p className="text-xs text-muted-foreground">Hanover, PA</p>
                     </div>
                   </div>
                 </div>
@@ -299,13 +299,13 @@ function Home() {
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">Service Area</span>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
-              Proudly serving <span className="text-gradient-orange">Westminster &amp; beyond.</span>
+              Proudly serving <span className="text-gradient-orange">Hanover, PA &amp; beyond.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              Based in Westminster, Maryland, we serve all of Carroll County and surrounding communities with prompt, professional paving services.
+              Based in Hanover, Pennsylvania, we serve communities throughout Pennsylvania, Maryland, and surrounding areas with professional paving services.
             </p>
             <ul className="mt-8 grid grid-cols-2 gap-3 text-sm">
-              {["Westminster", "Carroll County", "Eldersburg", "Sykesville", "Finksburg", "Hampstead", "Manchester", "New Windsor"].map((c) => (
+              {["Hanover", "York", "Littlestown", "Gettysburg", "New Oxford", "Manheim", "Baltimore", "Westminster"].map((c) => (
                 <li key={c} className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> {c}</li>
               ))}
             </ul>
@@ -321,7 +321,7 @@ function Home() {
                 <p className="mt-3 font-display text-6xl font-extrabold text-gradient-orange">24h</p>
                 <p className="mt-2 text-muted-foreground">Free estimate response within one business day.</p>
                 <div className="mt-8 grid grid-cols-3 gap-3 text-center">
-                  {["Carroll", "Howard", "Frederick"].map((c) => (
+                  {["York", "Adams", "Lancaster"].map((c) => (
                     <div key={c} className="rounded-2xl border border-white/10 bg-white/5 p-4">
                       <p className="font-display text-sm font-bold">{c}</p>
                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground">County</p>
