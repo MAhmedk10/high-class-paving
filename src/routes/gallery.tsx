@@ -14,10 +14,14 @@ const items = [
   { cat: "Sealcoating" as Cat, img: site.images.sealTree, title: "Wraparound Sealcoating", span: "md:row-span-2" },
   { cat: "Resurfacing" as Cat, img: site.images.driveEntry, title: "Estate Entrance Resurface", span: "md:col-span-2" },
   { cat: "Repair" as Cat, img: site.images.crackRepair, title: "Crack Repair & Sealing", span: "md:col-span-1" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F62bd63cfbd0a4c858933943f39c2fef0?format=webp&width=800&height=1200", title: "Fresh Seal Coat Application", span: "md:col-span-1" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fb79fe0d255c842fa936fc5f53b890dce?format=webp&width=800&height=1200", title: "Professional Sealcoating", span: "md:col-span-1 md:row-span-2" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F852ddd53c0f640e5bb57d94b85e47dd0?format=webp&width=800&height=1200", title: "Full Driveway Sealcoat", span: "md:col-span-1" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F84777fff90f2465ebd5f3676f118a305?format=webp&width=800&height=1200", title: "Quality Sealcoating Finish", span: "md:col-span-2" },
 ];
 
 function Gallery() {
-  usePageMeta("Gallery — Paving & Sealcoating Projects | High-Class Paving", "Real before & after photos of sealcoating, resurfacing and asphalt installation projects in Westminster, MD.");
+  usePageMeta("Gallery — Paving & Sealcoating Projects | High-Class Paving", "Real before & after photos of sealcoating, resurfacing and asphalt installation projects in Hanover, PA and surrounding areas.");
   const [active, setActive] = useState<Cat>("All");
   const filtered = active === "All" ? items : items.filter((i) => i.cat === active);
 
@@ -26,7 +30,7 @@ function Gallery() {
       <PageHero
         eyebrow="Portfolio"
         title={<>Real work, <span className="text-gradient-orange">real results.</span></>}
-        sub="A look at recent residential paving and sealcoating projects across Westminster and Carroll County."
+        sub="A look at recent residential paving and sealcoating projects across Hanover, PA and surrounding Pennsylvania and Maryland communities."
         img={site.images.sealTree}
       />
 
