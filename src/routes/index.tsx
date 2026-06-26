@@ -302,7 +302,7 @@ function Home() {
               Proudly serving <span className="text-gradient-orange">Hanover, PA &amp; beyond.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              Based in Hanover, Pennsylvania, we serve communities throughout Pennsylvania, Maryland, and surrounding areas with prompt, professional paving services.
+              Based in Hanover, Pennsylvania, we serve communities throughout Pennsylvania, Maryland, and surrounding areas with professional paving services.
             </p>
             <ul className="mt-8 grid grid-cols-2 gap-3 text-sm">
               {["Hanover", "York", "Littlestown", "Gettysburg", "New Oxford", "Manheim", "Baltimore", "Westminster"].map((c) => (
