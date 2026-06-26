@@ -6,7 +6,7 @@ import { FinalCTA } from "./index";
 import { site } from "@/lib/site";
 import { usePageMeta } from "@/lib/usePageMeta";
 
-const cats = ["All", "Sealcoating", "Resurfacing", "Installation", "Repair"] as const;
+const cats = ["All", "Sealcoating", "Resurfacing", "Installation", "Repair", "Tar & Chip"] as const;
 type Cat = typeof cats[number];
 
 const items = [
@@ -25,6 +25,10 @@ const items = [
   { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F2879411f8ef241e6861b485f775d3984?format=webp&width=800&height=1200", title: "New Asphalt Driveway Install" },
   { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fdca6a4a975e84d91a298dea285346153?format=webp&width=800&height=1200", title: "Fresh Asphalt Installation" },
   { cat: "Installation" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F848ca3262db64f3bbaa4b9f1bfe927b9?format=webp&width=800&height=1200", title: "Professional Asphalt Paving" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fe368d9d8e3984693bbc7efb4eb954c24?format=webp&width=800&height=1200", title: "Elegant Tar & Chip Driveway" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F66648e2fbd6d4ae383dfe2987325b936?format=webp&width=800&height=1200", title: "Rustic Tar & Chip Surface" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F62fbc1ab54fa488c941dca1dd97852c8?format=webp&width=800&height=1200", title: "Before & After Tar & Chip" },
+  { cat: "Tar & Chip" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F19de1a3c7fd5488497c52007bc5c37bc?format=webp&width=800&height=1200", title: "Premium Tar & Chip Installation" },
 ];
 
 function Gallery() {
