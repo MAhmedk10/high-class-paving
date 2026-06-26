@@ -10,7 +10,7 @@ export const site = {
   tagline: "Make Driveways Great Again!",
   phone: "443-617-4992",
   phoneHref: "tel:+14436174992",
-  area: "Westminster, Maryland",
+  area: "Hanover, Pennsylvania",
   logo,
   images: {
     driveHill,

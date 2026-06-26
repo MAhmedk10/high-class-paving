@@ -31,7 +31,7 @@ export function Header() {
     <>
       {/* Top utility ribbon */}
       <div className="fixed inset-x-0 top-0 z-[51] hidden h-7 items-center justify-center gap-6 bg-asphalt text-[10px] font-medium uppercase tracking-[0.3em] text-white/50 md:flex">
-        <span className="text-primary">●</span> Westminster, MD
+        <span className="text-primary">●</span> Hanover, PA
         <span className="h-3 w-px bg-white/15" />
         Free Estimates · 1-Year Warranty
         <span className="h-3 w-px bg-white/15" />

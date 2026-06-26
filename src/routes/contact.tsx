@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 import { usePageMeta } from "@/lib/usePageMeta";
 
 function Contact() {
-  usePageMeta("Contact — Free Estimate | High-Class Paving", "Get a free paving or sealcoating estimate in Westminster, MD. Call 443-617-4992 or send a message.");
+  usePageMeta("Contact — Free Estimate | High-Class Paving", "Get a free paving or sealcoating estimate in Hanover, PA and surrounding areas. Call 443-617-4992 or send a message.");
   const [sent, setSent] = useState(false);
 
   return (
@@ -58,7 +58,7 @@ function Contact() {
                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> 1-Year Workmanship Warranty</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Oil-based premium sealcoating</li>
                     <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Fast, honest estimates</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Local Westminster business</li>
+                    <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-primary" /> Local Hanover, PA business</li>
                   </ul>
                 </div>
               </div>

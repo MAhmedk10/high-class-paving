@@ -16,7 +16,7 @@ const reviews = [
 ];
 
 function Reviews() {
-  usePageMeta("Reviews — High-Class Paving & Sealcoating LLC", "Real reviews from Westminster, MD homeowners. Honest pricing, professional service and quality workmanship.");
+  usePageMeta("Reviews — High-Class Paving & Sealcoating LLC", "Real reviews from Hanover, PA homeowners. Honest pricing, professional service and quality workmanship.");
   return (
     <Layout>
       <PageHero
@@ -55,7 +55,7 @@ function Reviews() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary font-display font-bold text-primary-foreground">★</div>
                     <div>
                       <p className="text-sm font-semibold">Verified Customer</p>
-                      <p className="text-xs text-muted-foreground">Westminster, MD</p>
+                      <p className="text-xs text-muted-foreground">Hanover, PA</p>
                     </div>
                   </div>
                 </div>
