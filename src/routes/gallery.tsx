@@ -5,6 +5,8 @@ import { PageHero } from "./services";
 import { FinalCTA } from "./index";
 import { site } from "@/lib/site";
 import { usePageMeta } from "@/lib/usePageMeta";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const cats = ["All", "Sealcoating", "Resurfacing", "Installation", "Repair", "Tar & Chip"] as const;
 type Cat = typeof cats[number];
@@ -34,7 +36,24 @@ const items = [
 function Gallery() {
   usePageMeta("Gallery — Paving & Sealcoating Projects | High-Class Paving", "Real before & after photos of sealcoating, resurfacing and asphalt installation projects in Hanover, PA and surrounding areas.");
   const [active, setActive] = useState<Cat>("All");
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const filtered = active === "All" ? items : items.filter((i) => i.cat === active);
+
+  const handleImageClick = (index: number) => {
+    setSelectedIndex(index);
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null && selectedIndex < filtered.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (selectedIndex !== null && selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    }
+  };
 
   return (
     <Layout>
@@ -68,19 +87,70 @@ function Gallery() {
           <div className="grid auto-rows-[280px] grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {filtered.map((it, i) => (
               <Reveal key={i} delay={i * 0.05}>
-                <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10">
+                <button
+                  onClick={() => handleImageClick(i)}
+                  className="group relative h-full overflow-hidden rounded-3xl border border-white/10 cursor-pointer w-full text-left"
+                >
                   <img src={it.img} alt={it.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-5">
                     <span className="text-[10px] font-semibold uppercase tracking-widest text-primary">{it.cat}</span>
                     <p className="font-display text-lg font-bold">{it.title}</p>
                   </div>
-                </div>
+                </button>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
+
+      <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
+        <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-black/95 rounded-2xl overflow-hidden">
+          {selectedIndex !== null && (
+            <div className="relative w-full h-[70vh] flex flex-col">
+              <button
+                onClick={() => setSelectedIndex(null)}
+                className="absolute top-4 right-4 z-10 p-2 hover:bg-white/10 rounded-lg transition"
+              >
+                <X className="w-6 h-6 text-white" />
+              </button>
+
+              <div className="flex-1 flex items-center justify-center relative">
+                <img
+                  src={filtered[selectedIndex].img}
+                  alt={filtered[selectedIndex].title}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+
+              <div className="px-6 py-4 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-primary">{filtered[selectedIndex].cat}</span>
+                  <p className="text-white font-display text-lg font-bold mt-1">{filtered[selectedIndex].title}</p>
+                </div>
+
+                <div className="flex gap-2">
+                  <button
+                    onClick={handlePrev}
+                    disabled={selectedIndex === 0}
+                    className="p-2 hover:bg-white/10 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition"
+                  >
+                    <ChevronLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    disabled={selectedIndex === filtered.length - 1}
+                    className="p-2 hover:bg-white/10 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg transition"
+                  >
+                    <ChevronRight className="w-6 h-6 text-white" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
       <FinalCTA />
     </Layout>
   );
