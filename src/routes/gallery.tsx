@@ -18,6 +18,10 @@ const items = [
   { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fb79fe0d255c842fa936fc5f53b890dce?format=webp&width=800&height=1200", title: "Professional Sealcoating" },
   { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F852ddd53c0f640e5bb57d94b85e47dd0?format=webp&width=800&height=1200", title: "Full Driveway Sealcoat" },
   { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F84777fff90f2465ebd5f3676f118a305?format=webp&width=800&height=1200", title: "Quality Sealcoating Finish" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fe74dbd733bc94a6aabbd7849cbc7c477?format=webp&width=800&height=1200", title: "Crack Filling Process" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F95b245be7ce84ee3a4e35ab267505288?format=webp&width=800&height=1200", title: "Professional Crack Repair" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fc1b5335691814c40b3773b8cce662005?format=webp&width=800&height=1200", title: "Crack Sealing Application" },
+  { cat: "Repair" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fdf173dcf8c594665ae5c1bf27f99a945?format=webp&width=800&height=1200", title: "Quality Crack Repair Work" },
 ];
 
 function Gallery() {
