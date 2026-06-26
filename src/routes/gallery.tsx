@@ -105,9 +105,9 @@ function Gallery() {
       </section>
 
       <Dialog open={selectedIndex !== null} onOpenChange={(open) => !open && setSelectedIndex(null)}>
-        <DialogContent className="max-w-4xl w-full max-h-[90vh] p-0 border-0 bg-black/95 rounded-2xl overflow-hidden">
+        <DialogContent className="max-w-5xl w-[95vw] max-h-[95vh] p-0 gap-0 border-0 bg-black/95 rounded-2xl overflow-hidden flex flex-col">
           {selectedIndex !== null && (
-            <div className="relative w-full h-[70vh] flex flex-col">
+            <>
               <button
                 onClick={() => setSelectedIndex(null)}
                 className="absolute top-4 right-4 z-10 p-2 hover:bg-white/10 rounded-lg transition"
@@ -115,7 +115,7 @@ function Gallery() {
                 <X className="w-6 h-6 text-white" />
               </button>
 
-              <div className="flex-1 flex items-center justify-center relative">
+              <div className="flex-1 flex items-center justify-center min-h-0">
                 <img
                   src={filtered[selectedIndex].img}
                   alt={filtered[selectedIndex].title}
@@ -123,7 +123,7 @@ function Gallery() {
                 />
               </div>
 
-              <div className="px-6 py-4 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-between">
+              <div className="px-6 py-4 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-between flex-shrink-0">
                 <div>
                   <span className="text-[10px] font-semibold uppercase tracking-widest text-primary">{filtered[selectedIndex].cat}</span>
                   <p className="text-white font-display text-lg font-bold mt-1">{filtered[selectedIndex].title}</p>
@@ -146,7 +146,7 @@ function Gallery() {
                   </button>
                 </div>
               </div>
-            </div>
+            </>
           )}
         </DialogContent>
       </Dialog>
