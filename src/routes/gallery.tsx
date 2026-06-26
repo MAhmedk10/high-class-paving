@@ -10,14 +10,14 @@ const cats = ["All", "Sealcoating", "Resurfacing", "Installation", "Repair"] as 
 type Cat = typeof cats[number];
 
 const items = [
-  { cat: "Installation" as Cat, img: site.images.driveHill, title: "Hillside Driveway Install", span: "md:col-span-2 md:row-span-2" },
-  { cat: "Sealcoating" as Cat, img: site.images.sealTree, title: "Wraparound Sealcoating", span: "md:row-span-2" },
-  { cat: "Resurfacing" as Cat, img: site.images.driveEntry, title: "Estate Entrance Resurface", span: "md:col-span-2" },
-  { cat: "Repair" as Cat, img: site.images.crackRepair, title: "Crack Repair & Sealing", span: "md:col-span-1" },
-  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F62bd63cfbd0a4c858933943f39c2fef0?format=webp&width=800&height=1200", title: "Fresh Seal Coat Application", span: "md:col-span-1" },
-  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fb79fe0d255c842fa936fc5f53b890dce?format=webp&width=800&height=1200", title: "Professional Sealcoating", span: "md:col-span-1 md:row-span-2" },
-  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F852ddd53c0f640e5bb57d94b85e47dd0?format=webp&width=800&height=1200", title: "Full Driveway Sealcoat", span: "md:col-span-1" },
-  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F84777fff90f2465ebd5f3676f118a305?format=webp&width=800&height=1200", title: "Quality Sealcoating Finish", span: "md:col-span-2" },
+  { cat: "Installation" as Cat, img: site.images.driveHill, title: "Hillside Driveway Install" },
+  { cat: "Sealcoating" as Cat, img: site.images.sealTree, title: "Wraparound Sealcoating" },
+  { cat: "Resurfacing" as Cat, img: site.images.driveEntry, title: "Estate Entrance Resurface" },
+  { cat: "Repair" as Cat, img: site.images.crackRepair, title: "Crack Repair & Sealing" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F62bd63cfbd0a4c858933943f39c2fef0?format=webp&width=800&height=1200", title: "Fresh Seal Coat Application" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2Fb79fe0d255c842fa936fc5f53b890dce?format=webp&width=800&height=1200", title: "Professional Sealcoating" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F852ddd53c0f640e5bb57d94b85e47dd0?format=webp&width=800&height=1200", title: "Full Driveway Sealcoat" },
+  { cat: "Sealcoating" as Cat, img: "https://cdn.builder.io/api/v1/image/assets%2Fd4b2815f9b934b2ab9c2447b100ddfb1%2F84777fff90f2465ebd5f3676f118a305?format=webp&width=800&height=1200", title: "Quality Sealcoating Finish" },
 ];
 
 function Gallery() {
@@ -54,9 +54,9 @@ function Gallery() {
             </div>
           </Reveal>
 
-          <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-3 md:grid-flow-dense">
+          <div className="grid auto-rows-[280px] grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {filtered.map((it, i) => (
-              <Reveal key={i} delay={i * 0.05} className={it.span ?? ""}>
+              <Reveal key={i} delay={i * 0.05}>
                 <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10">
                   <img src={it.img} alt={it.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-asphalt via-asphalt/40 to-transparent" />
